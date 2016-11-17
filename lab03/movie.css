@@ -1,0 +1,146 @@
+/*
+Daniele Pautasso
+
+css file for tmnt.html 
+*/
+
+body{
+	margin: 0;
+	font-size: 8pt;
+	background-image: url(http://courses.cs.washington.edu/courses/cse190m/11sp/homework/2/background.png);
+	font-family: Tahoma, Verdana, sans-serif;
+}
+
+#banner{
+	background-image: url(http://courses.cs.washington.edu/courses/cse190m/11sp/homework/2/bannerbg.png);
+	background-repeat: repeat-x;
+	text-align: center; 
+	max-height: 50px;
+	margin-top: 0;
+}
+
+h1{
+	text-align: center;
+	font-size: 24pt;
+	font-weight: bold;
+	text-shadow: 3px 3px #999999;
+}
+
+#container{
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	border: solid 4px gray;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+#left_area{
+	width: 550px;
+}
+
+.coloumn{
+	width: 47%;
+	float: left;
+	margin-left: 2%;
+}
+
+#right_area{
+	width: 250px;
+	background-color: #A2B964;
+	float:right;
+	bottom: 0px;
+}
+
+#right_area  img{
+	/*border-radius: 10px 10px 10px 10px;*/
+}
+
+dl{
+	font-family: Arial, sans-serif;
+	padding: 10pt;
+	margin: 0;
+}
+
+dt{
+	font-weight: bold;
+}
+
+dd{
+	margin-bottom: 10pt;
+}
+
+dd:last-child{
+	margin-bottom: 0;
+}
+
+ul{
+	list-style: none;
+	padding-left: 0;
+}
+
+#score{
+	background-image: url(http://courses.cs.washington.edu/courses/cse190m/11sp/homework/2/rbg.png);
+	background-repeat: repeat-x;
+	height: 83px;
+	margin: 0;
+}
+
+#score > img{
+	float: left;
+}
+
+#score > span{
+	color: red;
+	font-weight: bold;
+	font-size: 48pt;
+	padding-top: 6px;
+	display: block;
+}
+
+.review{
+	margin-bottom: 20pt;
+}
+
+.review p:first-child{
+	font-weight: bold;
+	background-color:  #E8DC9B;
+	border: solid 2px gray;
+	padding: 8px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.review p:first-child > img{
+	float: left;
+	margin-right: 5px;
+}
+
+.review p:last-child{
+	overflow: hidden;
+}
+
+.review p:last-child > img{
+	float: left;
+	margin-right: 5px;
+}
+
+.pub{
+	font-style: italic;
+}
+
+#bottom p{
+	clear: both;
+	background-color: #A2B964; 
+	text-align: center;
+	margin: 0;
+	padding: 5px;
+}
+
+#validation{
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	opacity: 0.5;
+}
