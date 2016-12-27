@@ -1,0 +1,45 @@
+body{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 14pt;
+}
+
+#puzzlearea {
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	height: 400px;
+	position: relative;
+}
+
+#puzzlearea > div {
+	width: 90px;
+	height: 90px;
+	border: 5px solid black;
+	color: black;
+	font-weight: bold;
+	font-size: 40pt;
+	position: absolute;
+	background-image: url("background.jpg"); 
+}
+
+#puzzlearea > div.highlighted {
+	border: 5px solid red;
+	color:red;
+}
+
+.hidden_elem {
+	visibility: hidden;
+	display: none;
+}
+
+#victory_banner{
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 10pt;
+	margin-top: 30px;
+	color: green;
+	background-color: rgb(165,223,148);
+	width: 360px;
+	padding: 20px;
+}
