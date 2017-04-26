@@ -1,0 +1,125 @@
+@import url("header.css");
+
+html{
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	min-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	margin:0;
+	font-family: sans-serif;
+	/*background-color: lightgrey;*/
+	background-image: url("../img/bkg/3.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#playlog_container{
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	padding-left: 5%;
+	padding-right: 5%;
+	min-height: 100%;
+	background-color: white;
+	overflow: hidden;
+	margin-top: 60px;
+	background-color: rgba(255,255,255,0.9);
+}
+
+
+.game_div{
+	width: 96%;
+	height: 110px;
+	padding: 15px;
+	border-bottom: 1px solid lightgrey;
+}
+
+.game_div > img {
+    margin-right: 20px;
+	width: 110px;
+	height: 110px; 
+	float: left;
+	border-radius: 5px;
+}
+
+.game_div > a
+{
+	width: 70%;
+	padding-top: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 15pt;
+	color: rgb(66,66,66);
+	display: inline-block;
+	transition: all 0.2s;
+}
+
+.game_div > a:hover
+{
+	color: rgb(122, 200, 106);
+	transition: all 0.2s;
+}
+
+.game_div > p {
+	font-size: 13pt;
+	color: gray;
+}
+
+.high_rating > span {
+	color: green;
+	font-size: 16pt;
+}
+
+.mid_rating > span{
+	color: orange;
+	font-size: 16pt;
+}
+
+.low_rating > span{
+	color: red;
+	font-size: 16pt;
+}
+
+.user_div{
+	font-size: 17pt;
+	font-weight: bolder;
+	width: 96%;
+	height: 110px;
+	padding: 15px;
+	border-bottom: 1px solid lightgrey;
+}
+
+.user_div > a{
+	color: rgb(66, 66, 66);
+}
+
+.user_div > a:hover{
+	color: rgb(122, 200, 106);
+}
+
+.user_div > img{
+	margin-right: 20px;
+	width: 110px;
+	height: 110px;
+	float: left;
+	border-radius: 50%;
+}
+
+.user_div > a{
+	display: inline-block;
+	margin-top: 40px;
+	text-decoration: none;
+}
+
+.alert_p{
+	padding-top: 50px;
+	font-weight: bold;
+	text-align: center;
+	font-size: 2em;
+}

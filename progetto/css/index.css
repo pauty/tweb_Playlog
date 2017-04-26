@@ -1,0 +1,272 @@
+html { 
+	height:100%;
+}
+body { 
+	height: 100%;
+	margin: 0;
+	line-height: 1.2;
+	color: rgb(66,66,66);
+	background-size: cover;
+	transition: background-image 2s linear;
+	font-family: sans-serif;
+	z-index: -99;
+}
+
+a{
+	text-decoration: none;
+}
+
+.bkg_0{
+	background-image: url("../img/bkg/0.jpg");
+}
+
+.bkg_1{
+	background-image: url("../img/bkg/1.jpg");
+}
+
+.bkg_2{
+	background-image: url("../img/bkg/2.jpg");
+}
+
+#page_container{
+	width: 75%;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top:0;
+	margin-bottom: 0;
+	min-width: 800px;
+}
+
+#left_coloumn{
+	margin:0;
+	margin-left: 5%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.75);
+	width: 37%;
+	float: left;
+	text-align: center;
+	overflow: hidden;
+}
+
+#logo{
+	border:0;
+	margin:0;
+	background-color: rgba(0,0,0,0.7);
+	font-size: 50pt;
+	color: white;
+	text-align: center;
+	padding: 5%;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	font-weight: bolder;
+}
+
+#logo > span{
+	color: rgb(122,200,106);
+}
+
+#left_coloumn p{
+	text-align: left;
+}
+
+#left_coloumn h1{
+	text-align: left;
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+#left_coloumn h2{
+	font-size: 13pt;
+	text-align: left;
+	font-weight: bold;
+}
+
+#left_coloumn h3{
+	text-align: left;
+	font-size: 11pt;
+	font-weight: normal;
+}
+
+button{
+	cursor: pointer;
+}
+
+#left_coloumn button {
+	width: 80pt;
+	height: 30pt;
+	background-color: rgb(122, 200, 106);
+	border-style: none;
+	font-size: 13pt;
+	border-radius: 5px;
+	color: white;
+	margin-left: 4%;
+	margin-right: 4%;
+	margin-top: 8%;
+	transition: background-color 0.2s;
+}
+
+
+#left_coloumn button:hover {
+	background-color: rgb(109, 159, 192);
+	transition: background-color 0.2s;
+}
+
+#left_coloumn input[type="text"], input[type="password"]{
+	width: 100%;
+	font-size: 14pt;
+	padding: 5px;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	background-color: transparent;
+	border:0;
+	border-bottom: 1px solid darkgrey;
+	transition: font-size 0.2s ;
+}
+
+
+#left_coloumn input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: black;
+    opacity: 0.5;
+}
+
+#left_coloumn input::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: black;
+   opacity:  0.5;
+}
+
+
+#left_coloumn input[type="text"]:focus, input[type="password"]:focus{
+	font-size: 16pt;
+}
+
+#left_coloumn button.info_button{
+	color: blue;
+	padding:3px;
+	font-size: 10pt;
+	background-color: red;
+	width: 20pt;
+	height: 10pt;
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-bottom: 15%;
+
+}
+
+
+#welcome_area{
+	padding:17%;
+	padding-top: 10%;
+}
+
+#welcome_area a{
+	cursor: pointer;
+	color: rgb(109, 159, 192);
+}
+
+#welcome_area a:hover{
+	text-decoration: underline;
+}
+
+#right_coloumn{
+	padding-top: 33%;
+	padding-left:17%;
+	float:left;
+	width:40%;
+	position: relative;
+}
+
+#left_coloumn #error_p {
+	padding:15px;
+	color:red;
+	background-color: rgb(255,169,169);
+	text-align: center;
+	font-size: 11pt;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+
+#game_link{
+	opacity: 0.8;
+	position: absolute;
+	top: 5%;
+	right: 12%;
+	width: 30px;
+	height: 30px;
+	background-color: rgb(66,66,66);
+	color: white;
+	padding:10px;
+	border-radius: 5px;
+	overflow: hidden;
+	transition: all 0.5s;
+}
+
+#game_link:hover{
+	width: 200px;
+	transition: all 0.5s;
+}
+
+#game_link > p:last-child{
+	float:right;
+	text-align: center;
+	margin: 0;
+}
+
+#game_link > p:first-child{
+	margin: 0;
+	display: none;
+	width: 0;
+}
+
+#game_link:hover > p:first-child{
+	display: block;
+	float:left;
+	width: 120px;
+	transition: all 0.5s;
+}
+
+
+#right_coloumn input[type="text"]{
+	opacity: 0.8;
+	background-color: rgb(66,66,66);
+	padding: 10px;
+	border:0;
+	border-radius:5px; /*28*/
+	font-size: 14pt;
+	width: 64%;
+	height: 20px;
+	color: white;
+	margin-bottom: 80px;
+	padding-right:50px;
+	/*box-shadow: 10px 10px 5px #888888;*/
+
+}
+
+#right_coloumn input[type="text"]:focus{
+	opacity: 0.9;
+	outline: rgb(122, 200, 106) solid;
+}
+
+
+.search_button{
+	opacity: 0.7;
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+	border:0;
+	border-radius: 5px;
+	position: relative;
+	top:3px;
+    left:-44px;
+    transition: all 0.2s ease-in;
+}
+
+.search_button:hover{
+	background-color: rgb(122, 200, 106);
+	transition: all 0.2s ease-in;
+}
+
+.fa{
+	font-size: 2em;
+	color: white;
+}

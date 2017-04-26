@@ -1,0 +1,100 @@
+button{
+	cursor: pointer;
+}
+
+.header{
+	z-index: 4;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(66,66,66,0.9);
+	height: 60px;
+	width: 100%;
+}
+
+.header_container{
+	width: 70%;
+	height: 60px;
+	min-width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: rgba(66,66,66,0.95);
+}
+
+.header_banner{
+	display: inline-block;
+	font-size: 13pt;
+	color: white;
+	text-decoration: none;
+	font-weight: bolder;
+	padding-top: 18px;
+	margin-right: 3%;
+	margin-left: 1%;
+	transition: all 0.2s;
+}
+
+.header_banner:hover{
+	color: rgb(122, 200, 106);
+}
+
+.header_control{
+	height: 27px;
+	display: inline-block;
+	font-size: 11pt;
+	color: white;
+	text-decoration: none;
+	font-weight: bolder;
+	padding: 10px;
+	padding-top: 23px;
+	float: right;
+	transition: all 0.2s;
+}
+
+.header_control:hover{
+	color: rgb(122, 200, 106);
+	background-color: rgb(100,100,100);
+	transition: all 0.2s;
+}
+
+.header_search{
+	display: inline-block;
+	font-size: 14pt;
+	padding: 7px;
+	padding-right: 40px;
+	border-radius: 5px;
+	width: 22%;
+	margin: 0;
+	margin-top: 12px;
+	background-color: rgb(100,100,100);
+	border: 0;
+	transition: width 0.2s;
+	color: white;
+}
+
+.header_search:focus{
+	outline: rgb(122, 200, 106) solid 1px;
+}
+
+.header_search_button{
+	width: 36px;
+	height: 36px;
+	background-color: transparent;
+	background-size: cover;
+	border: 0;
+	border-radius: 5px;
+	position: relative;
+    left:-40px;
+    top: 1px;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.header_search_button:hover{
+	background-color: rgb(122, 200, 106);
+	transition: background-color 0.2s;
+}
+
+.fa.fa-search{
+	font-size: 1.6em;
+	color: white;
+}
