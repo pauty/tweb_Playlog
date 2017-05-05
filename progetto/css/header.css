@@ -88,7 +88,6 @@ button{
     left:-40px;
     display: inline-block;
     transition: background-color 0.2s;
-    vertical-align: middle;
 }
 
 .header_search_button:hover{
