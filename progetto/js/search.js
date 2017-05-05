@@ -16,6 +16,8 @@ window.onload = function() {
 function search_games () {
 	var gametitle = $("header_search_gametitle").value;
 	if(gametitle!=''){
+		clear_list();
+		show_alert("Searching... please wait");
 		new Ajax.Request("lib/request_handlers/search_handler.php",
 			{
 				method: "post", 
@@ -30,6 +32,8 @@ function search_games () {
 function search_users () {
 	var username = $("header_search_username").value;
 	if(username!=''){
+		clear_list();
+		show_alert("Searching... please wait");
 		new Ajax.Request("lib/request_handlers/search_handler.php",
 			{
 				method: "post", 
@@ -50,6 +54,7 @@ function clear_list(){
 
 function show_games_list(ajax){
 	clear_list();
+	window.scrollTo(0,0);
 	var games = JSON.parse(ajax.responseText);
 	var result_list = $("result_list");
 	var game_div;
@@ -68,7 +73,7 @@ function show_games_list(ajax){
 
 			img = document.createElement("img");
 			game_div.appendChild(img);
-			if(games[i].cover!=null)
+			if(games[i].cover != null)
 				img.src = "https:"+games[i].cover.url;
 			else
 				img.src="img/default/cover_not_found.jpg";
@@ -81,7 +86,7 @@ function show_games_list(ajax){
 
 			rating_p = document.createElement("p");
 			game_div.appendChild(rating_p);
-			if(games[i].rating){
+			if(games[i].rating != null){
 				rating_p.innerHTML="Rated: <span>"+Math.floor(games[i].rating)+"</span>/100";
 				if(games[i].rating >= 75)
 					rating_p.addClassName("high_rating");
@@ -96,18 +101,16 @@ function show_games_list(ajax){
 		}
 	}
 	else{
-		var alert_p = document.createElement("p");
-		if(success_code==0)
-			alert_p.innerHTML="No result for the searched game";
+		if(success_code == 0)
+			show_alert("No result for the searched game");
 		else
-			alert_p.innerHTML="Sorry, an error has occurred. Please try again later";
-		alert_p.addClassName("alert_p");
-		result_list.appendChild(alert_p);
+			show_alert("Sorry, an error has occurred. Please try again later");
 	}
 }
 
 function show_users_list(ajax){
 	clear_list();
+	window.scrollTo(0,0);
 	var users = JSON.parse(ajax.responseText);
 	var result_list = $("result_list");
 	var user_div;
@@ -135,14 +138,18 @@ function show_users_list(ajax){
 		}
 	}
 	else{
-		var alert_p = document.createElement("p");
 		if(success_code==0)
-			alert_p.innerHTML="No result for the searched user";
+			show_alert("No result for the searched user");
 		else
-			alert_p.innerHTML="Sorry, an error has occurred. Please try again later";
-		alert_p.addClassName("alert_p");
-		result_list.appendChild(alert_p);
+			show_alert("Sorry, an error has occurred. Please try again later");
 	}
+}
+
+function show_alert(message){
+		var alert_p = document.createElement("p");
+		alert_p.innerHTML = message;
+		alert_p.addClassName("alert_p");
+		$("result_list").appendChild(alert_p);
 }
 
 function handle_failure(ajax) {

@@ -4,7 +4,13 @@ require_once(__DIR__."/../search/search_functions.php");
 
 session_start();
 
-$function = $_POST["function"];
+if(isset($_POST["function"])){
+	$function = $_POST["function"];
+}
+else{
+	http_response_code(404); 
+	die();
+}
 $res = null;
 
 switch($function){

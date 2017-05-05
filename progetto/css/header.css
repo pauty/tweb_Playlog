@@ -1,3 +1,4 @@
+
 button{
 	cursor: pointer;
 }
@@ -8,46 +9,48 @@ button{
 	top: 0;
 	left: 0;
 	background-color: rgba(66,66,66,0.9);
-	height: 60px;
+	height: 50px;
 	width: 100%;
 }
 
 .header_container{
 	width: 70%;
-	height: 60px;
-	min-width: 900px;
+	height: 100%;
+	min-width: 800px;
 	margin-right: auto;
 	margin-left: auto;
 	background-color: rgba(66,66,66,0.95);
 }
 
-.header_banner{
+.header_logo{
 	display: inline-block;
-	font-size: 13pt;
+	font-size: 1em;
 	color: white;
 	text-decoration: none;
 	font-weight: bolder;
-	padding-top: 18px;
 	margin-right: 3%;
 	margin-left: 1%;
 	transition: all 0.2s;
 }
 
-.header_banner:hover{
+.header_logo:hover{
 	color: rgb(122, 200, 106);
 }
 
+
 .header_control{
-	height: 27px;
+	height: 100%;
 	display: inline-block;
-	font-size: 11pt;
+	font-size: 0.9em;
 	color: white;
 	text-decoration: none;
 	font-weight: bolder;
-	padding: 10px;
-	padding-top: 23px;
 	float: right;
+	padding-top: 20px;
+	padding-left: 1%;
+	padding-right: 1%;
 	transition: all 0.2s;
+	box-sizing: border-box;
 }
 
 .header_control:hover{
@@ -58,17 +61,17 @@ button{
 
 .header_search{
 	display: inline-block;
-	font-size: 14pt;
-	padding: 7px;
+	font-size: 1.1em;
 	padding-right: 40px;
+	padding-left: 8px;
+	border:0;
 	border-radius: 5px;
-	width: 22%;
-	margin: 0;
-	margin-top: 12px;
+	width: 24%;
+	height: 36px;
+	margin-top: 7px;
 	background-color: rgb(100,100,100);
-	border: 0;
-	transition: width 0.2s;
 	color: white;
+	box-sizing: border-box;
 }
 
 .header_search:focus{
@@ -76,17 +79,16 @@ button{
 }
 
 .header_search_button{
-	width: 36px;
 	height: 36px;
+	width: 36px;
 	background-color: transparent;
-	background-size: cover;
 	border: 0;
 	border-radius: 5px;
 	position: relative;
     left:-40px;
-    top: 1px;
     display: inline-block;
     transition: background-color 0.2s;
+    vertical-align: middle;
 }
 
 .header_search_button:hover{

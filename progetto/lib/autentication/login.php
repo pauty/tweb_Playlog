@@ -2,12 +2,15 @@
 
 require_once(__DIR__."/../db_connection/local.php");
 
-/*an integer value is returned, with the following meaning: 
+/*
+an integer value is returned, with the following meaning: 
   0  = query to the database was successful, but no match for email/password found
   1  = query to the database was successful, and a match was found (proceed to login)
   -1 = a database error occurred
   -2 = at least one argument was set to null
   -3 = a session was already opened
+please note that negative values are considered as server side errors and not
+notified to the user on client side. They are intended for debugging purpuoses only
  */
 function user_login($email,$password){
    $res = 0;
@@ -31,10 +34,11 @@ function user_login($email,$password){
 	return $res;
 }
 
-/*return an array filled with the user credentials if the login was successful (match found)
-  return an empty array if no match was found in the database
-  return null if a database or invalid argument error occurred
- */
+/*
+return an associative array filled with the user credentials if the login was successful (match found)
+return an empty array if no match was found in the database
+return null if a database or invalid argument error occurred
+*/
 function check_password($email,$password){
 	$res = null;
 	try{

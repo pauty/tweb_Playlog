@@ -48,7 +48,7 @@ session_start();
 							(<span class="green">green</span> pin) by clicking on the squares and building a path with the pieces you are given. Be as fast as you can, because when the setup time runs out electricity will start flowing trough the board. If electricity reaches a dead end, game is over.
 						</p>
 						<p>
-							The longer your path, the higher your score: as a bonus, building a complete loop in your path will reward you with three times the standard points. Try to beat your own record. Good luck!
+							The longer your path, the higher your score: as a bonus, building a complete loop will reward you with three times the standard points. Try to beat your own record. Good luck!
 						</p>
 							<button id="start_game_button">START</button> 
 

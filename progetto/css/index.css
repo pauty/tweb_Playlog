@@ -28,14 +28,14 @@ a{
 	background-image: url("../img/bkg/2.jpg");
 }
 
-#page_container{
+#playlog_container{
 	width: 75%;
 	height: 100%;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top:0;
 	margin-bottom: 0;
-	min-width: 800px;
+	min-width: 700px;
 }
 
 #left_coloumn{
@@ -53,7 +53,7 @@ a{
 	border:0;
 	margin:0;
 	background-color: rgba(0,0,0,0.7);
-	font-size: 50pt;
+	font-size: 4.4em;
 	color: white;
 	text-align: center;
 	padding: 5%;
@@ -72,19 +72,19 @@ a{
 
 #left_coloumn h1{
 	text-align: left;
-	font-size: 20pt;
+	font-size: 1.3em;
 	font-weight: bold;
 }
 
 #left_coloumn h2{
-	font-size: 13pt;
+	font-size: 1.1em;
 	text-align: left;
 	font-weight: bold;
 }
 
-#left_coloumn h3{
+#left_coloumn h3{  /*small*/
 	text-align: left;
-	font-size: 11pt;
+	font-size: 0.8em;
 	font-weight: normal;
 }
 
@@ -93,16 +93,19 @@ button{
 }
 
 #left_coloumn button {
-	width: 80pt;
-	height: 30pt;
+	width: 40%;
+	height: 9%;
+	padding:3%;
 	background-color: rgb(122, 200, 106);
 	border-style: none;
-	font-size: 13pt;
+	font-size: 1.1em;
+	font-weight: bold;
 	border-radius: 5px;
 	color: white;
 	margin-left: 4%;
 	margin-right: 4%;
 	margin-top: 8%;
+	font-family: sans-serif;
 	transition: background-color 0.2s;
 }
 
@@ -114,10 +117,10 @@ button{
 
 #left_coloumn input[type="text"], input[type="password"]{
 	width: 100%;
-	font-size: 14pt;
-	padding: 5px;
-	margin-top: 5%;
-	margin-bottom: 5%;
+	font-size: 1.1em;
+	padding: 1%;
+	margin-top: 4%;
+	margin-bottom: 4%;
 	background-color: transparent;
 	border:0;
 	border-bottom: 1px solid darkgrey;
@@ -137,26 +140,12 @@ button{
 
 
 #left_coloumn input[type="text"]:focus, input[type="password"]:focus{
-	font-size: 16pt;
+	font-size: 1.3em;
 }
-
-#left_coloumn button.info_button{
-	color: blue;
-	padding:3px;
-	font-size: 10pt;
-	background-color: red;
-	width: 20pt;
-	height: 10pt;
-	margin-left: 30%;
-	margin-right: 30%;
-	margin-bottom: 15%;
-
-}
-
 
 #welcome_area{
 	padding:17%;
-	padding-top: 10%;
+	padding-top: 8%;
 }
 
 #welcome_area a{
@@ -177,7 +166,7 @@ button{
 }
 
 #left_coloumn #error_p {
-	padding:15px;
+	padding: 3%;
 	color:red;
 	background-color: rgb(255,169,169);
 	text-align: center;
@@ -221,24 +210,24 @@ button{
 #game_link:hover > p:first-child{
 	display: block;
 	float:left;
-	width: 120px;
-	transition: all 0.5s;
+	width: 70%;
+	transition: all 0.4s;
 }
 
 
 #right_coloumn input[type="text"]{
 	opacity: 0.8;
 	background-color: rgb(66,66,66);
-	padding: 10px;
+	padding: 2%;
 	border:0;
-	border-radius:5px; /*28*/
-	font-size: 14pt;
-	width: 64%;
-	height: 20px;
+	border-radius:5px; 
+	font-size: 1.15em;
+	width: 75%;
+	height: 40px;
 	color: white;
-	margin-bottom: 80px;
-	padding-right:50px;
-	/*box-shadow: 10px 10px 5px #888888;*/
+	margin-bottom: 14%;
+	padding-right: 50px;
+	box-sizing: border-box;
 
 }
 
@@ -249,16 +238,16 @@ button{
 
 
 .search_button{
-	opacity: 0.7;
 	width: 40px;
 	height: 40px;
 	background-color: transparent;
 	border:0;
 	border-radius: 5px;
 	position: relative;
-	top:3px;
     left:-44px;
     transition: all 0.2s ease-in;
+    box-sizing: border-box;
+    vertical-align: top;
 }
 
 .search_button:hover{

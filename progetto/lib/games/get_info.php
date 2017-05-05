@@ -4,8 +4,8 @@ require_once(__DIR__."/../db_connection/remote.php");
 
 /*return an array containing all the infos about the game with the specified 'id'
   fields that are guaranteed to be filled are: name, platforms, publishers, developers, genres. (eventually, they will assume the 'Unknown' value)
-  please manually check the remaining fields: cover, summary, rating, screenshots
-  if no game exists with the specified id, null is returned instead 
+  please manually check the remaining fields: release date, cover, summary, rating, screenshots
+  if no game exists with the specified id or the remote request has no success, null is returned instead 
 */
 function get_game_info($id){
 	$res = null;

@@ -4,7 +4,13 @@ require_once(__DIR__."/../users/ownership.php");
 
 session_start();
 
-$function = $_POST["function"];
+if(isset($_POST["function"])){
+	$function = $_POST["function"];
+}
+else{
+	http_response_code(404); 
+	die();
+}
 $res = null;
 
 switch($function){
@@ -17,8 +23,8 @@ switch($function){
 		else
 			$res = array('success' => 0);
 		break;
-	case "update_ownership_small":
-		if(update_ownership_small($_SESSION["id"],$_POST["gameid"],$_POST["state"]))
+	case "quick_update_ownership":
+		if(quick_update_ownership($_SESSION["id"],$_POST["gameid"],$_POST["state"]))
 			$res = array('success' => $_POST["gameid"]); //as success code, return game id
 		else
 			$res = array('success' => -1);

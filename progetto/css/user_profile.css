@@ -14,25 +14,11 @@ body{
 	height: 100%;
 	width: 100%;
 	font-family: sans-serif;
-	min-width: 720px;
-	/*background-color: lightgray;*/
+	min-width: 700px;
 	margin: 0;
 	background-image: url("../img/bkg/3.jpg");
 	background-size: cover;
 	background-attachment: fixed;
-}
-
-h2{
-	text-align: center;
-	font-size: 11pt;
-	margin-bottom: 20px;
-}
-
-h2 > img{
-	margin: 3%;
-	width: 85%;
-	border-radius: 50%;
-	height: auto;
 }
 
 #playlog_container{
@@ -41,31 +27,117 @@ h2 > img{
 	margin-left: auto;
 	margin-right: auto;
 	background-color: rgba(255,255,255,0.9);
-	overflow: hidden;
+	padding-top: 55px;
+	color: rgb(66,66,66);
 }
 
 #tab_coloumn{
 	position: fixed;
-	top: 60px;
-	width: 12%;
-	min-width: 80px;
+	top:0;
+	padding-top: 55px;
+	width: 13%;
+	min-width: 120px;
 	height: 100%;
 	border-right: 1px solid lightgray;
 }
 
+#tab_coloumn > img{
+ 	display: block;
+ 	margin: 8px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+	width: 85%;
+	border-radius: 50%;
+	height: auto;
+	position: relative;
+	z-index: -1;
+}
+
+#tab_coloumn > h1{
+	text-align: center;
+	margin: 0;
+	font-size: 1.2em;
+}
+
+#follow_button{
+	display: block;
+	margin-left: auto;
+	margin-right: 10%;
+	margin-top: -30%;
+	margin-bottom: 10%;
+	border-radius: 50%;
+	z-index: 1;
+	width: 40px;
+	height: 40px;
+	font-size: 1.8em;
+	text-align: center;
+	line-height: 37px;
+}
+
+#follow_button.follow{
+	color: white;
+	background-color: rgb(109, 159, 192);
+	border: 2px solid rgb(109, 159, 192);
+}
+
+#follow_button.unfollow{
+	background-color: white;
+	color: rgb(109, 159, 192);
+	border: 2px solid rgb(109, 159, 192);
+}
+
+#follow_button:hover{
+	background-color: lightblue;
+	transition: all 0.2s;
+}
+
+.group_button h2{
+	text-align: center;
+	margin:0;
+	padding:7%;
+	text-decoration: underline;
+	background-color: lightgray;
+	color: rgb(66,66,66);
+	font-size: 1.1em;
+	cursor: pointer;
+}
+
+.group_button h2:hover{
+	background-color: darkgray;
+	color:white;
+
+}
+
+.group_button.group_selected h2, .group_button.group_selected h2:hover{
+	background-color: rgb(128,128,128);
+	color: white;
+
+}
+
 #game_list{
-	width: 83%;
-	margin-left: 17%;
-	padding-top: 90px;
+	width: 81%;
+	height: 100%;
+	margin-left: 19%;
+}
+
+.group_button .group_content{
+	max-height: 0;
+	overflow: hidden;
+}
+
+.group_button.group_selected .group_content{
+	max-height: 500px;
+	transition: max-height 1s;
 }
 
 .tab_button{
-	height: 9%;
+	padding: 5%;
+	color: rgb(66,66,66);
 	width: 100%;
-	min-width: 80px;
+	min-width: 120px;
 	background-color: transparent;
 	border:0;
-	font-size: 2em;
+	font-size: 1.5em;
 	transition: all 0.2s;
 	line-height: 50%;
 	border-bottom: 1px solid lightgray;
@@ -80,16 +152,15 @@ h2 > img{
 
 .tab_button > span{
 	position: relative;
-	bottom: 7px;
+	bottom: 3px;
 	display: inline-block;
-	font-size: 0.45em;
+	font-size: 0.65em;
 	margin-left: 5%;
 }
 
 .tab_selected{
 	color: white;
 	background-color: rgb(122, 200, 106);
-	
 }
 
 .tab_selected:hover{
@@ -98,8 +169,8 @@ h2 > img{
 
 .state_buttons{
 	position: absolute;
-	bottom: 4px;
-	right: 3px;
+	bottom: 1%;
+	right: 1%;
 	float: right;
 }
 .state_button{
@@ -118,7 +189,7 @@ h2 > img{
 	transition: all 0.2s;
 }
 
-.game_div{
+.game_div, .user_div{
 	position: relative;
 	width: 78%;
 	margin-left: auto;
@@ -136,6 +207,15 @@ h2 > img{
 	margin-right: 20px;
 	border-radius: 5px;
 }
+
+.user_div > img{
+	width: 110px;
+	height: 110px;
+	float: left;
+	margin-right: 20px;
+	border-radius: 50%;
+}
+
 .game_div > a{
 	display: block;
 	color: rgb(66,66,66);
@@ -145,7 +225,38 @@ h2 > img{
 	transition: all 0.2s;
 }
 
-.game_div > a:hover{
+.user_div > a{
+	display: block;
+	color: rgb(66,66,66);
+	text-decoration: none;
+	font-weight: bolder;
+	font-size:1.4em;
+	padding-top: 40px;
+	transition: all 0.2s;
+}
+
+.user_div > button{
+	position: absolute;
+	bottom: 15px;
+	right: 20px;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid rgb(66, 66, 66);
+	font-size: 1em;
+	float: right;
+	background-color: lightgray;
+	border-radius: 5px;
+	transition: all 0.2s;
+}
+
+.user_div > button:hover{
+	border-color: rgb(109, 159, 192);
+	color: rgb(109, 159, 192);
+	transition: all 0.2s;
+}
+
+.game_div > a:hover, .user_div > a:hover{
 	color: rgb(122, 200, 106);
 	transition: all 0.2s;
 }
@@ -153,8 +264,7 @@ h2 > img{
 .game_div > p{
 	display: block;
 	padding-left: 20px;
-	font-size:1em;
-	margin-top: 15px;
+	margin-top: 2%;
 }
 
 .alert_p{

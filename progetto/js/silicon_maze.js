@@ -20,7 +20,7 @@ window.onload = function(){
     		RECORD = parseInt(window.localStorage.playlog_record);
 	} 
 
-		/*set the event observer for game/user search*/
+	/*set the event observer for game/user search*/
 	$("header_search_gametitle").observe("keydown", function(e){ if(e.keyCode == 13)submit_search_game(); });
     $("header_search_username").observe("keydown", function(e){ if(e.keyCode == 13)submit_search_user(); });
 	$("header_search_game_button").observe("click",submit_search_game);
@@ -155,7 +155,9 @@ function check_broken_position(row,coloumn){
 	return true;
 }
 
-
+/*
+randomly create a start and an end point
+*/
 function init_start_end(){
 	var p1,p2;
 	var row_left=Math.floor(Math.random()*NUM_ROWS);
@@ -181,6 +183,10 @@ function init_start_end(){
 	$(row_right+"_"+coloumn_right).addClassName(get_direction(row_right,coloumn_right));
 }
 
+/*
+get a random initial direction for start/end point
+wich is compatible with their positions on the grid
+*/
 function get_direction(row,coloumn){
 	var dir;
 	switch(Math.floor(Math.random()*4)){
@@ -208,6 +214,9 @@ function get_direction(row,coloumn){
 	return dir;
 }
 
+/*
+ititialize the next square area, creating 4 new pieces
+*/
 function init_next(){
 	var next_div = $("next_squares");
 	for(var i = 0; i < 4; i++){
@@ -281,7 +290,6 @@ function check_path(){
 				PLAYING=false;
 				activate_square(current_square);
 				setTimeout(level_finished,2000);
-				
 			}
 			else{
 				next_dir=get_next_dir(current_square,expected_dir);
@@ -290,8 +298,7 @@ function check_path(){
 					PLAYING=false;
 					current_square.addClassName("dead_end");
 					current_square.innerHTML='<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <br>DEAD END</p>';
-					setTimeout(game_over,4000);
-					
+					setTimeout(game_over,4000);	
 				}
 				else{
 					activate_square(current_square,next_dir);
@@ -319,15 +326,13 @@ function check_path(){
 					}
 					EXPECTED_DIR = next_dir;
 				}
-
 			}
 		}
 		else{
 			PLAYING=false;
 			current_square.addClassName("dead_end");
 			current_square.innerHTML='<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <br>DEAD END</p>';
-			setTimeout(game_over,4000);
-			
+			setTimeout(game_over,4000);	
 		}
 	}
 }

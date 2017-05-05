@@ -27,19 +27,23 @@ handle_logout();
 	<body id="dynamic_background" class="bkg_0">
 
 		<?php
+		/* 
+		Here we handle the case user was redirected to index.php after clicking on login/signup buttons in other pages.
+		Since we show the login/signup form dinamically using javascript, we simply create an hidden input. 
+		On page load the script will check if such hidden input exists, and eventually show the requested form*/
 		if(isset($_GET["show_login"])){
 			?>
 			<input id="show_login" type="hidden">
 		<?php
 		}
-		if(isset($_GET["show_signup"])){
+		else if(isset($_GET["show_signup"])){
 			?>
 			<input id="show_signup" type="hidden">
 		<?php
 		}
 		?>
 		
-		<div id="page_container">
+		<div id="playlog_container">
 			<div id="left_coloumn">
 				<a id="banner" href="index.php">
 					<div id=logo class="animated fadeInDown">
@@ -55,16 +59,15 @@ handle_logout();
 					<a href="user_profile.php?id=<?= $_SESSION["id"] ?>"><?= $_SESSION["username"] ?></a>
 					<br>
 				</h1>
-				<p><br>Not your account? <a href="index.php?logout=t"> Log Out</a></p>
+				<p><br>Not your account? <a href="index.php?logout=t">Log Out</a></p>
 				<?php
-				}else 
-				{
+				}
+				else{
 				?>
 					<h1>Join play.log and never forget to play your favourite games!</h1>
-					<br>
 					<p>
 						Playlog is an easy way to keep track of all the games you and your friends are currently into.
-						Simply search for a game, add it to one of your lists and 
+						It is useful for gamers, perfect for collectors. Simply search for a game and add it to one of your lists. 
 					</p>
 					<button id="login_button">Log In</button>
 					<button id="signup_button">Sign Up</button>	

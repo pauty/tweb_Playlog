@@ -1,6 +1,9 @@
 <?php
 
-/*session_start() must be called before this function*/
+/*
+IMPORTANT: 
+session_start() must be called before this function
+*/
 function handle_logout() {
 	/*if the user logged out, we destroy
 	the previuous session and start a new one,
