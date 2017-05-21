@@ -6,6 +6,13 @@ session_start();
 
 <!DOCTYPE html>
 
+<!--
+###################################
+The interactive page. Here te user can play a simple game
+made in JavaScript.
+###################################
+-->
+
 <html lang="en">
 	<head>
 		<title>Silicon Maze</title>

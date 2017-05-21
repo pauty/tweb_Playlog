@@ -6,7 +6,7 @@ require_once("lib/games/get_info.php");
 $user_id=null;
 $game_id=null;
 
-//if no game id was specified, we redirect to search page
+//if no game id was specified, redirect the user to search page
 if(isset($_GET["id"]))
 	$game_id = $_GET["id"];
 else{
@@ -24,6 +24,14 @@ $game_info = get_game_info($game_id);
 ?>
 
 <!DOCTYPE html>
+
+<!--
+###################################
+The page that shows detailed information about a 
+specific game. If the user logged in, he can also
+add/move the game to one of his lists 
+###################################
+-->
 
 <html lang="en">
 	<head>

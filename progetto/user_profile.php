@@ -12,10 +12,24 @@ else{
     die();
 }
 
+/*
+get the name of the user with the specified id.
+if we get null value, such user does not exist.
+*/
 $username = get_username($profile_id);
 ?>
 
 <!DOCTYPE html>
+
+<!--
+###################################
+User's profile page. 
+Users can see other users' profiles
+and edit their own lists as long as they are
+logged in. From here users can also
+follow/unfollow each other.
+###################################
+-->
 
 <html lang="en">
 	<head>

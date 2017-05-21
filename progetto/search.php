@@ -4,6 +4,14 @@ session_start();
 
 <!DOCTYPE html>
 
+<!--
+###################################
+The page wich shows search results (both games and users)
+Users are redirected here after using the search fields that 
+are found in the home page and in the header.
+###################################
+-->
+
 <html lang="en">
 	<head>
 		<title>Playlog - Search</title>

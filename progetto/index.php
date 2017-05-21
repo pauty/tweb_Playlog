@@ -9,6 +9,16 @@ handle_logout();
 
 <!DOCTYPE html>
 
+<!--
+###################################
+The Home page of the site.
+Login and Signup forms are shown on request.
+From here it is also possible to search for
+games/users, and reach the interactive section
+(see 'silicon_maze.php') 
+###################################
+-->
+
 <html lang="en">
 	<head>
 		<title>Playlog</title>

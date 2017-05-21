@@ -1,3 +1,13 @@
+<!--
+###################################
+The header that is included in every page.
+It contains the games and users searchbars.
+If the user logged in, references to his profile and
+to the logout function are shown;
+otherwise, he will see the Sign In and Log In buttons
+###################################
+-->
+
 <div class="header">
 	<div class="header_container">
 		<a href="index.php" class="header_logo">
