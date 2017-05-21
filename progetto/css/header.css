@@ -86,6 +86,7 @@ button{
 	border-radius: 5px;
 	position: relative;
     left:-40px;
+    top: 2px;
     display: inline-block;
     transition: background-color 0.2s;
 }

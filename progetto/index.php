@@ -24,7 +24,7 @@ handle_logout();
 
 	</head>
 
-	<body id="dynamic_background" class="bkg_0">
+	<body id="dynamic_background" class="bkg_<?= rand(0,2) ?>">
 
 		<?php
 		/* 

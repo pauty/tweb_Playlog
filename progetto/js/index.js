@@ -11,8 +11,8 @@ window.onload = function() {
 	if(signup_button != null)
 		signup_button.observe("click",show_signup_form);
 
-	/*periodically trasition between backrounds*/
-	setInterval(change_background,10000);
+	/*periodicaL trasition between backrounds - UNUSED*/
+	//setInterval(change_background,10000);
 
 	if($("show_login") != null)
 		show_login_form();
@@ -21,6 +21,10 @@ window.onload = function() {
 
 }
 
+/*
+change background image of body element.
+UNUSED - now the background is randomly set on page load, and doesn't change over time.
+*/
 function change_background(){
 	var bkg = $("dynamic_background");
 

@@ -1,6 +1,6 @@
 @import url("header.css");
 
-/*to avoid resizing when scrollbar appears*/
+/*to avoid page resizing when scrollbar appears*/
 :root { 
 	overflow-y: scroll; 
 }
@@ -35,7 +35,7 @@ body{
 	position: fixed;
 	top:0;
 	padding-top: 55px;
-	width: 13%;
+	width: 17%;
 	min-width: 120px;
 	height: 100%;
 	border-right: 1px solid lightgray;
@@ -46,7 +46,7 @@ body{
  	margin: 8px;
  	margin-left: auto;
  	margin-right: auto;
-	width: 85%;
+	width: 80%;
 	border-radius: 50%;
 	height: auto;
 	position: relative;
@@ -94,7 +94,7 @@ body{
 .group_button h2{
 	text-align: center;
 	margin:0;
-	padding:7%;
+	padding:5%;
 	text-decoration: underline;
 	background-color: lightgray;
 	color: rgb(66,66,66);
@@ -115,9 +115,9 @@ body{
 }
 
 #game_list{
-	width: 81%;
+	width: 75%;
 	height: 100%;
-	margin-left: 19%;
+	margin-left: 25%;
 }
 
 .group_button .group_content{
@@ -131,7 +131,7 @@ body{
 }
 
 .tab_button{
-	padding: 5%;
+	padding: 4%;
 	color: rgb(66,66,66);
 	width: 100%;
 	min-width: 120px;
