@@ -2,6 +2,11 @@
 
 require_once(__DIR__."/../db_connection/local.php");
 
+/*
+This file contains all the functions that are needed 
+to allow an user to sign up
+*/
+
 /* 
 return true if signup informations provided are valid, false otherwise
 */

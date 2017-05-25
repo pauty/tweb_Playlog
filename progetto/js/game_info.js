@@ -102,7 +102,7 @@ function handle_button_click() {
 	new Ajax.Request("lib/request_handlers/ownership_handler.php",
 	{
 		method: "post", 
-		parameters: { function: "update_ownership",
+		parameters: { function: "manage_ownership",
 					  gameid: game_id, 
 					  gametitle: gametitle,
 					  platforms: platforms_str,

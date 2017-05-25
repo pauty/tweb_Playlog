@@ -8,9 +8,9 @@ otherwise, he will see the Sign In and Log In buttons
 ###################################
 -->
 
-<div class="header">
-	<div class="header_container">
-		<a href="index.php" class="header_logo">
+<div id="header">
+	<div id="header_container">
+		<a href="index.php" id="header_logo">
 			<div>
 				play.log
 			</div>

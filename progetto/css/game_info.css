@@ -17,6 +17,10 @@ body{
 	background-attachment: fixed;
 }
 
+hr{
+  color: white;
+}
+
 #playlog_container{
  	min-height: 100%;
  	overflow: hidden;

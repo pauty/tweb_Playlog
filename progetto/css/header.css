@@ -3,7 +3,7 @@ button{
 	cursor: pointer;
 }
 
-.header{
+#header{
 	z-index: 4;
 	position: fixed;
 	top: 0;
@@ -13,7 +13,7 @@ button{
 	width: 100%;
 }
 
-.header_container{
+#header_container{
 	width: 70%;
 	height: 100%;
 	min-width: 800px;
@@ -22,7 +22,7 @@ button{
 	background-color: rgba(66,66,66,0.95);
 }
 
-.header_logo{
+#header_logo{
 	display: inline-block;
 	font-size: 1em;
 	color: white;
@@ -33,13 +33,14 @@ button{
 	transition: all 0.2s;
 }
 
-.header_logo:hover{
+#header_logo:hover{
 	color: rgb(122, 200, 106);
 }
 
-
 .header_control{
 	height: 100%;
+	max-width: 15%;
+	overflow: hidden;
 	display: inline-block;
 	font-size: 0.9em;
 	color: white;
@@ -83,20 +84,17 @@ button{
 	width: 36px;
 	background-color: transparent;
 	border: 0;
+	padding: 0;
 	border-radius: 5px;
 	position: relative;
-    left:-40px;
-    top: 2px;
-    display: inline-block;
+    left: -41px;
+    top: 3px;
     transition: background-color 0.2s;
+    font-size: 1.5em;
+	color: white;
 }
 
 .header_search_button:hover{
 	background-color: rgb(122, 200, 106);
 	transition: background-color 0.2s;
-}
-
-.fa.fa-search{
-	font-size: 1.6em;
-	color: white;
 }

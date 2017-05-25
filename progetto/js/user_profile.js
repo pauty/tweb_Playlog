@@ -205,7 +205,7 @@ function show_game(game,can_edit,listname){
 	$("game_list").appendChild(game_div);
 
 	img = document.createElement("img");
-	if(game.cover_url!=null)
+	if(game.cover_url!=null && game.cover_url!="")
 		img.src = "https://images.igdb.com/igdb/image/upload/t_thumb/"+(game.cover_url);
 	else
 		img.src="img/default/cover_not_found.jpg";
@@ -342,7 +342,7 @@ function state_button_click() {
 	new Ajax.Request("lib/request_handlers/ownership_handler.php",
 	{
 		method: "post", 
-		parameters: { function: "quick_update_ownership",
+		parameters: { function: "quick_manage_ownership",
 					  gameid: this.value, 
 					  state: this.title },
 		onSuccess:  handle_ownership_success,

@@ -3,6 +3,14 @@
 require_once(__DIR__."/../db_connection/local.php");
 
 /*
+This file contains all the functions used to gather
+user-related informations:
+- user's name
+- games added by a user to a specific list
+- follower/followed lists 
+*/
+
+/*
 return user name associated to user_id on success
 return null if such user does not exists, or a database error has occurred
 */
@@ -28,7 +36,7 @@ function get_username($user_id){
 }
 
 /*
-return an array of games if list specified by 'listname' is not empty for user specified by 'user_id'
+return an array of games added to the list specified by 'listname', by the user specified by 'user_id'
 return an empty array if such list empty
 return null if an error occurred 
 */
@@ -72,6 +80,11 @@ function get_games_list($user_id,$listname,$limit){
 	return $res;
 }
 
+/*
+return an array of users that represent either the 'followers' or the 'followed' list, relative to the user specified by 'user_id'
+return an empty array if such list empty
+return null if an error occurred 
+*/
 function get_users_list($user_id,$listname,$limit){
 	$res = null;
 	try{

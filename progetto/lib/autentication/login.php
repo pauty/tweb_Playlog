@@ -3,6 +3,11 @@
 require_once(__DIR__."/../db_connection/local.php");
 
 /*
+This file contains all the functions needed to
+allow an user to log in
+*/
+
+/*
 an integer value is returned, with the following meaning: 
   0  = query to the database was successful, but no match for email/password found
   1  = query to the database was successful, and a match was found (proceed to login)
