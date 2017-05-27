@@ -39,7 +39,8 @@ button{
 
 .header_control{
 	height: 100%;
-	max-width: 15%;
+	max-width: 18%;
+	white-space: nowrap;
 	overflow: hidden;
 	display: inline-block;
 	font-size: 0.9em;
