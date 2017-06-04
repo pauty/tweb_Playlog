@@ -205,8 +205,10 @@ function show_game(game,can_edit,listname){
 	$("game_list").appendChild(game_div);
 
 	img = document.createElement("img");
-	if(game.cover_url!=null && game.cover_url!="")
-		img.src = "https://images.igdb.com/igdb/image/upload/t_thumb/"+(game.cover_url);
+	if(game.cover_url!=null && game.cover_url!=""){
+		//img.src = "https://images.igdb.com/igdb/image/upload/t_thumb/"+(game.cover_url);
+		img.src = "https://images.igdb.com/igdb/image/upload/t_thumb/"+(game.cover_url)+".jpg"; //TEMPORARY WORKAROUND FOR INTERNAL ISSUE OF IMAGE CDN ---!!!!!!!!!!!
+	}
 	else
 		img.src="img/default/cover_not_found.jpg";
 		img.alt = "game cover";

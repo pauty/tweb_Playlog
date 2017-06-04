@@ -73,8 +73,10 @@ function show_games_list(ajax){
 
 			img = document.createElement("img");
 			game_div.appendChild(img);
-			if(games[i].cover != null)
-				img.src = "https:"+games[i].cover.url;
+			if(games[i].cover != null){
+				//img.src = "https:"+games[i].cover.url;
+				img.src = "https:"+(games[i].cover.url).replace(".png",".jpg"); //TEMPORARY WORKAROUND FOR INTERNAL ISSUE OF IMAGES CDN  ----!!!!!!!
+			}
 			else
 				img.src="img/default/cover_not_found.jpg";
 			img.alt = "game cover";

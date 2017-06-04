@@ -117,7 +117,7 @@ add/move the game to one of his lists
 					//show either the game's cover or the default image (cover not found)
 					if(isset($game_info["cover"])){
 						?>
-						<img id="cover" src="<?= $game_info["cover"]["url"] ?>" alt="game cover">
+						<img id="cover" src="<?= $game_info["cover"]["url"].'.jpg' ?>" alt="game cover"> <!-- TEMPORARY WORKAROUND FOR INTERNAL ISSUE OF IMAGE CDN -->
 						<?php
 					}
 					else{
@@ -169,13 +169,13 @@ add/move the game to one of his lists
 							<!-- Wrapper for slides -->
 							<div class="carousel-inner" role="listbox">
 								<div class="item active">
-									<img src="<?= 'https://images.igdb.com/igdb/image/upload/t_screenshot_big/'.$game_info["screenshots"]["0"]["cloudinary_id"] ?>" alt="screenshot">
+									<img src="<?= 'https://images.igdb.com/igdb/image/upload/t_screenshot_big/'.$game_info["screenshots"]["0"]["cloudinary_id"].'.jpg' ?>" alt="screenshot"> <!-- TEMPORARY WORKAROUND FOR INTERNAL ISSUE OF IMAGE CDN --> 
 								</div>
 								<?php
 								for($i=1; $i < $screenshots_num; $i++){
 									?>
 									<div class="item">
-										<img src="<?= 'https://images.igdb.com/igdb/image/upload/t_screenshot_big/'.$game_info["screenshots"][$i]["cloudinary_id"] ?>" alt="screenshot">
+										<img src="<?= 'https://images.igdb.com/igdb/image/upload/t_screenshot_big/'.$game_info["screenshots"][$i]["cloudinary_id"].'.jpg' ?>" alt="screenshot">  <!-- TEMPORARY WORKAROUND FOR INTERNAL ISSUE OF IMAGE CDN -->
 									</div>
 									<?php
 								}

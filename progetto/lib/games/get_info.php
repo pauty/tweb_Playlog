@@ -83,9 +83,9 @@ function get_game_info($id){
 		  $genres= array ( '0' => array( 'name' => "Unknown") );
 
 		//set game cover info
-		if(isset($game["cover"]))
-		  $game["cover"]["url"]="https://images.igdb.com/igdb/image/upload/t_cover_big/".$game["cover"]["cloudinary_id"];
-
+		if(isset($game["cover"])){
+			$game["cover"]["url"]="https://images.igdb.com/igdb/image/upload/t_cover_big/".$game["cover"]["cloudinary_id"];
+		}
 
 		//build the final array to return
 		//unset($game["release_dates"]);
